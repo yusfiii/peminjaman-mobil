@@ -1,0 +1,141 @@
+/* Styling untuk body dan layout umum */
+body {
+  /* display: flex; */
+  min-height: 100vh; /* Mengatur tinggi body minimal */
+  margin: 0;
+  background-color: #f5f7fa;
+  flex-direction: row; /* Sidebar dan konten sejajar secara horizontal */
+}
+
+.sidebar {
+  width: 250px; /* Ukuran sidebar */
+  background-color: #212529 !important;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 100vh;
+  /* Tambahkan padding-top sesuai tinggi navbar Anda (asumsi 60px-70px) */
+  padding-top: 75px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk sidebar */
+  z-index: 100;
+  height: calc(100vh - 56px);
+  padding: 15px;
+}
+
+/* Menambahkan margin-top pada .content untuk menghindari navbar */
+.content {
+  margin-left: 250px; /* Memberikan ruang di sebelah kiri untuk sidebar */
+  padding: 20px;
+  /* width: calc(100% - 250px); Agar lebar konten menyesuaikan dengan sidebar */
+  margin-top: 56px; /* Memberikan ruang agar navbar tidak tertutup */
+}
+
+/* Menambahkan margin-top pada .navbar untuk memastikan navbar tidak tertimpa konten */
+.navbar {
+  position: fixed;
+  height: 56px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background-color: #007bff;
+  padding: 15px;
+  color: white;
+  width: 100%; /* Navbar memenuhi lebar halaman */
+  box-shadow: 0 4px 2px -2px gray; /* Menambahkan bayangan untuk navbar */
+  margin-top: 0;
+}
+
+/* Styling untuk tampilan sidebar */
+.sidebar .nav-link {
+  color: #ddd;
+  padding: 10px 15px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #495057;
+  color: white;
+}
+
+/* Styling untuk penanda aktif pada sidebar */
+.sidebar .nav-link.active {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #007bff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar .nav-item .nav-link.active::before {
+  opacity: 1;
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Sidebar lebar penuh pada layar kecil */
+    position: relative;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+
+/* ===== POLISH UI FORM ===== */
+.card {
+  border-radius: 12px;
+}
+
+.card-header {
+  border-radius: 12px 12px 0 0;
+  font-size: 1.05rem;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+  border-radius: 8px;
+}
+
+.alert {
+  border-radius: 10px;
+}
