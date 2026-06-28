@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Daftar resmi BPK/PMK terdaftar di Banjarbaru Rescue 698" />
+    <title>BARRES 698 — Daftar BPK Terdaftar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #0a0c10;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --yellow: #ffcc00;
+        --yellow-soft: #fff3c9;
+        --yellow-dark: #e5b800;
+        --gray-50: #f9fafb;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-500: #6b7280;
+        --gray-700: #374151;
+        --gray-900: #111827;
+        --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+        --transition: all 0.25s ease;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ========== NAVBAR ========== */
+      .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(12px);
+        z-index: 1000;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo-img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        border-radius: 12px;
+        background: white;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .logo-text {
+        font-weight: 800;
+        font-size: 1.3rem;
+        letter-spacing: -0.3px;
+        color: var(--gray-900);
+        line-height: 1.2;
+      }
+      .logo-text span {
+        font-weight: 500;
+        font-size: 0.65rem;
+        color: var(--gray-500);
+        display: block;
+        margin-top: 2px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        background: var(--gray-50);
+        padding: 4px;
+        border-radius: 100px;
+        border: 1px solid var(--gray-200);
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        padding: 8px 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 40px;
+        color: var(--gray-700);
+        transition: var(--transition);
+      }
+
+      .nav-links a.active,
+      .nav-links a:hover {
+        background: white;
+        color: #000;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ========== PAGE HEADER ========== */
+      .page-header {
+        background: linear-gradient(135deg, var(--yellow-soft) 0%, #fffbe6 100%);
+        padding: 56px 0 48px;
+        border-bottom: 3px solid var(--yellow);
+      }
+
+      .header-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--yellow);
+        padding: 6px 14px;
+        border-radius: 60px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+      }
+
+      .page-header h1 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        color: var(--gray-900);
+        margin-bottom: 12px;
+      }
+
+      .page-header .sub {
+        font-size: 0.95rem;
+        color: var(--gray-600);
+        max-width: 560px;
+      }
+
+      .register-date {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .date-chip {
+        background: white;
+        border-radius: 60px;
+        padding: 6px 16px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--gray-700);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+
+      /* ========== TOOLBAR ========== */
+      .toolbar {
+        background: white;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .toolbar-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .search-wrapper {
+        position: relative;
+        flex: 1;
+        min-width: 240px;
+      }
+
+      .search-wrapper i {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--gray-500);
+        font-size: 0.9rem;
+      }
+
+      .search-wrapper input {
+        width: 100%;
+        padding: 12px 16px 12px 44px;
+        border: 1.5px solid var(--gray-200);
+        border-radius: 60px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+        background: var(--gray-50);
+        transition: var(--transition);
+      }
+
+      .search-wrapper input:focus {
+        outline: none;
+        border-color: var(--yellow);
+        background: white;
+      }
+
+      .filter-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        background: var(--gray-50);
+        border: 1.5px solid var(--gray-200);
+        padding: 8px 18px;
+        border-radius: 40px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        color: var(--gray-600);
+      }
+
+      .filter-btn:hover {
+        border-color: var(--yellow);
+        color: #111;
+      }
+
+      .filter-btn.active {
+        background: var(--yellow);
+        border-color: var(--yellow-dark);
+        color: #111;
+      }
+
+      .count-pill {
+        background: var(--gray-50);
+        padding: 8px 18px;
+        border-radius: 40px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--gray-600);
+        white-space: nowrap;
+      }
+
+      .count-pill span {
+        font-weight: 800;
+        color: var(--gray-900);
+      }
+
+      /* ========== MAIN CONTENT ========== */
+      .section-content {
+        padding: 48px 0 64px;
+      }
+
+      .kecamatan-group {
+        margin-bottom: 48px;
+      }
+
+      .kecamatan-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        border-left: 5px solid var(--yellow);
+        padding-left: 18px;
+        margin-bottom: 24px;
+        margin-top: 8px;
+      }
+
+      .bpk-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 20px;
+      }
+
+      .bpk-card {
+        background: white;
+        border-radius: 20px;
+        border: 1px solid var(--gray-100);
+        padding: 20px;
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        gap: 16px;
+      }
+
+      .bpk-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--yellow);
+        box-shadow: var(--shadow-md);
+      }
+
+      .card-icon {
+        width: 52px;
+        height: 52px;
+        background: var(--yellow-soft);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #b97f00;
+        flex-shrink: 0;
+      }
+
+      .card-info {
+        flex: 1;
+      }
+
+      .bpk-nomor {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--gray-500);
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+      }
+
+      .bpk-nama {
+        font-size: 1rem;
+        font-weight: 800;
+        color: #111;
+        margin-bottom: 6px;
+        line-height: 1.3;
+      }
+
+      .bpk-wilayah {
+        font-size: 0.75rem;
+        color: var(--gray-500);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+
+      .bpk-alamat {
+        font-size: 0.7rem;
+        color: var(--gray-600);
+        background: var(--gray-50);
+        padding: 5px 10px;
+        border-radius: 12px;
+        display: inline-block;
+      }
+
+      .status-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 30px;
+        background: #dcfce7;
+        color: #15803d;
+        margin-top: 10px;
+      }
+
+      .status-tag i {
+        font-size: 0.55rem;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--gray-500);
+      }
+
+      .empty-state i {
+        font-size: 3rem;
+        margin-bottom: 16px;
+        opacity: 0.5;
+      }
+
+      /* ========== FOOTER ========== */
+      footer {
+        background: var(--gray-900);
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        padding: 32px 0;
+        font-size: 0.75rem;
+      }
+
+      footer strong {
+        color: var(--yellow);
+      }
+
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 900px) {
+        .container {
+          padding: 0 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .nav-links {
+          align-self: flex-start;
+        }
+        .toolbar-flex {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .filter-buttons {
+          justify-content: center;
+        }
+        .count-pill {
+          text-align: center;
+        }
+        .bpk-grid {
+          grid-template-columns: 1fr;
+        }
+        .bpk-card {
+          flex-direction: row;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 16px;
+        }
+        .nav-links a {
+          padding: 6px 14px;
+          font-size: 0.75rem;
+        }
+        .logo-text {
+          font-size: 1.1rem;
+        }
+        .page-header {
+          padding: 40px 0 32px;
+        }
+        .filter-btn {
+          padding: 6px 14px;
+          font-size: 0.65rem;
+        }
+        .bpk-card {
+          flex-direction: column;
+        }
+        .card-icon {
+          width: 48px;
+          height: 48px;
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <img src="barres2.png" alt="BARRES Logo" class="logo-img" onerror="this.onerror=null; this.src='https://placehold.co/44x44?text=698';" />
+          <div class="logo-text">BARRES 698<span>Banjarbaru Rescue</span></div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Beranda</a>
+          <a href="bpk.html" class="active">Daftar BPK</a>
+          <a href="pengurus.html">Pengurus</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <div class="page-header">
+      <div class="container">
+        <div class="header-badge"><i class="fas fa-file-alt"></i> REGISTER · 2 November 2025</div>
+        <h1>Daftar Registrasi<br />BPK/PMK & Emergency</h1>
+        <div class="sub">Berikut adalah data resmi Barisan Pemadam Kebakaran (BPK) dan unit emergency yang telah terdaftar dan diverifikasi oleh Banjarbaru Rescue 698.</div>
+        <div class="register-date">
+          <span class="date-chip"><i class="far fa-calendar-alt"></i> 2 November 2025</span>
+          <span class="date-chip"><i class="fas fa-check-circle"></i> Data resmi BARRES 698</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== TOOLBAR ========== -->
+    <div class="toolbar">
+      <div class="container toolbar-flex">
+        <div class="search-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Cari nama BPK, kelurahan, atau kecamatan..." oninput="filterAll()" />
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all" onclick="setFilter('all', this)">Semua</button>
+          <button class="filter-btn" data-filter="Banjarbaru Selatan" onclick="setFilter('Banjarbaru Selatan', this)">Banjarbaru Selatan</button>
+          <button class="filter-btn" data-filter="Banjarbaru Utara" onclick="setFilter('Banjarbaru Utara', this)">Banjarbaru Utara</button>
+          <button class="filter-btn" data-filter="Cempaka" onclick="setFilter('Cempaka', this)">Cempaka</button>
+          <button class="filter-btn" data-filter="Landasan Ulin" onclick="setFilter('Landasan Ulin', this)">Landasan Ulin</button>
+          <button class="filter-btn" data-filter="Liang Anggang" onclick="setFilter('Liang Anggang', this)">Liang Anggang</button>
+        </div>
+        <div class="count-pill"><span id="totalCount">0</span> BPK Terdaftar</div>
+      </div>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <div class="section-content">
+      <div class="container" id="bpkContainer"></div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+      <div class="container">
+        <p>© 2025 <strong>Banjarbaru Rescue 698 — BARRES</strong> · Kota Banjarbaru, Kalimantan Selatan</p>
+        <p style="margin-top: 6px">Data resmi terverifikasi · Siaga 24 jam · Kode 698</p>
+      </div>
+    </footer>
+
+    <script>
+      // ========== DATA BPK (Lengkap dari semua kecamatan) ==========
+      const bpkMaster = [
+        // BANJARBARU SELATAN (7 BPK)
+        { id: 1, nomor: "001", nama: "BPK INSAR 21", wilayah: "Sungai Besar", kecamatan: "Banjarbaru Selatan", alamat: "Sungai Besar" },
+        { id: 2, nomor: "002", nama: "HAYATI BANJARBARU", wilayah: "Sungai Besar", kecamatan: "Banjarbaru Selatan", alamat: "Sungai Besar" },
+        { id: 3, nomor: "003", nama: "BPK AN-NAFI", wilayah: "Guntung Paikat", kecamatan: "Banjarbaru Selatan", alamat: "Guntung Paikat" },
+        { id: 4, nomor: "004", nama: "G474H FIRE FIGHTER & RESCUE TEAM", wilayah: "Guntung Paikat", kecamatan: "Banjarbaru Selatan", alamat: "Guntung Paikat" },
+        { id: 5, nomor: "005", nama: "PMK HARMA", wilayah: "Kemuning", kecamatan: "Banjarbaru Selatan", alamat: "Kemuning" },
+        { id: 6, nomor: "006", nama: "MADA FIRE GROUP", wilayah: "Sungai Besar", kecamatan: "Banjarbaru Selatan", alamat: "Sungai Besar" },
+        { id: 7, nomor: "007", nama: "PMK BAUNTUNG", wilayah: "Kemuning", kecamatan: "Banjarbaru Selatan", alamat: "Kemuning" },
+        // BANJARBARU UTARA (4 BPK)
+        { id: 8, nomor: "008", nama: "REGAS FIRE & RESCUE", wilayah: "Sungai Ulin", kecamatan: "Banjarbaru Utara", alamat: "Sungai Ulin" },
+        { id: 9, nomor: "009", nama: "ETB FIRE RESCUE", wilayah: "Loktabat Utara", kecamatan: "Banjarbaru Utara", alamat: "Loktabat Utara" },
+        { id: 10, nomor: "010", nama: "PALAPA FIRE RESCUE", wilayah: "Mentaos", kecamatan: "Banjarbaru Utara", alamat: "Mentaos" },
+        { id: 11, nomor: "011", nama: "BPK BATRA", wilayah: "Loktabat Utara", kecamatan: "Banjarbaru Utara", alamat: "Loktabat Utara" },
+        // CEMPAKA (7 BPK)
+        { id: 12, nomor: "012", nama: "BPK TRISAKTI", wilayah: "Cempaka", kecamatan: "Cempaka", alamat: "Cempaka" },
+        { id: 13, nomor: "013", nama: "BPK RH", wilayah: "Sungai Tiung", kecamatan: "Cempaka", alamat: "Sungai Tiung" },
+        { id: 14, nomor: "014", nama: "BPK SIBAT", wilayah: "Bangkal", kecamatan: "Cempaka", alamat: "Bangkal" },
+        { id: 15, nomor: "015", nama: "NEW RESCUE MASPAL", wilayah: "Palam", kecamatan: "Cempaka", alamat: "Palam" },
+        { id: 16, nomor: "016", nama: "BPK RAST", wilayah: "Sungai Tiung", kecamatan: "Cempaka", alamat: "Sungai Tiung" },
+        { id: 17, nomor: "017", nama: "AL-BIDAYAH FIRE FIGHTER", wilayah: "Cempaka", kecamatan: "Cempaka", alamat: "Cempaka" },
+        { id: 18, nomor: "018", nama: "KAMPUR FIRE RESCUE", wilayah: "Palam", kecamatan: "Cempaka", alamat: "Palam" },
+        // LANDASAN ULIN (7 BPK)
+        { id: 19, nomor: "019", nama: "AL-FATIH FIRE RESCUE", wilayah: "Landasan Ulin Timur", kecamatan: "Landasan Ulin", alamat: "Landasan Ulin Timur" },
+        { id: 20, nomor: "020", nama: "AL-MA'UNAH", wilayah: "Landasan Ulin Timur", kecamatan: "Landasan Ulin", alamat: "Landasan Ulin Timur" },
+        { id: 21, nomor: "021", nama: "BPK GUP", wilayah: "Landasan Ulin Timur", kecamatan: "Landasan Ulin", alamat: "Landasan Ulin Timur" },
+        { id: 22, nomor: "022", nama: "SAUDARA FIRE RESCUE", wilayah: "Guntung Manggis", kecamatan: "Landasan Ulin", alamat: "Guntung Manggis" },
+        { id: 23, nomor: "023", nama: "BPK BAROKAH SYAMSUDIN NOOR", wilayah: "Syamsudin Noor", kecamatan: "Landasan Ulin", alamat: "Syamsudin Noor" },
+        { id: 24, nomor: "024", nama: "BPK SEPAKAT", wilayah: "Syamsudin Noor", kecamatan: "Landasan Ulin", alamat: "Syamsudin Noor" },
+        { id: 25, nomor: "025", nama: "GUNTUNG MANGGIS FIRE RESCUE", wilayah: "Guntung Manggis", kecamatan: "Landasan Ulin", alamat: "Guntung Manggis" },
+        // LIANG ANGGANG (2 BPK)
+        { id: 26, nomor: "026", nama: "BPK PRABU", wilayah: "Landasan Ulin Tengah", kecamatan: "Liang Anggang", alamat: "Landasan Ulin Tengah" },
+        { id: 27, nomor: "027", nama: "PENGAYUAN RESCUE", wilayah: "Landasan Ulin Selatan", kecamatan: "Liang Anggang", alamat: "Landasan Ulin Selatan" },
+      ];
+
+      // Urutan kecamatan untuk tampilan
+      const kecamatanOrder = ["Banjarbaru Selatan", "Banjarbaru Utara", "Cempaka", "Landasan Ulin", "Liang Anggang"];
+      let currentFilter = "all";
+
+      function getKecamatanDisplayName(key) {
+        const map = {
+          "Banjarbaru Selatan": "BANJARBARU SELATAN",
+          "Banjarbaru Utara": "BANJARBARU UTARA",
+          Cempaka: "CEMPAKA",
+          "Landasan Ulin": "LANDASAN ULIN",
+          "Liang Anggang": "LIANG ANGGANG",
+        };
+        return map[key] || key;
+      }
+
+      function filterData() {
+        const keyword = document.getElementById("searchInput").value.toLowerCase().trim();
+        let filtered = [...bpkMaster];
+
+        if (currentFilter !== "all") {
+          filtered = filtered.filter((item) => item.kecamatan === currentFilter);
+        }
+
+        if (keyword !== "") {
+          filtered = filtered.filter((item) => item.nama.toLowerCase().includes(keyword) || item.wilayah.toLowerCase().includes(keyword) || item.kecamatan.toLowerCase().includes(keyword) || item.nomor.includes(keyword));
+        }
+        return filtered;
+      }
+
+      function render() {
+        const filtered = filterData();
+        const container = document.getElementById("bpkContainer");
+        const totalElement = document.getElementById("totalCount");
+        totalElement.innerText = filtered.length;
+
+        if (filtered.length === 0) {
+          container.innerHTML = `
+          <div class="empty-state">
+            <i class="fas fa-search"></i>
+            <p>Tidak ada BPK yang ditemukan</p>
+            <p style="font-size: 0.8rem; margin-top: 8px;">Coba dengan kata kunci lain</p>
+          </div>
+        `;
+          return;
+        }
+
+        // Grouping berdasarkan kecamatan
+        const grouped = {};
+        filtered.forEach((item) => {
+          if (!grouped[item.kecamatan]) grouped[item.kecamatan] = [];
+          grouped[item.kecamatan].push(item);
+        });
+
+        // Render sesuai urutan kecamatan
+        let html = "";
+        for (let kec of kecamatanOrder) {
+          if (grouped[kec] && grouped[kec].length > 0) {
+            html += `
+            <div class="kecamatan-group">
+              <div class="kecamatan-title">${getKecamatanDisplayName(kec)}</div>
+              <div class="bpk-grid">
+          `;
+
+            // Sort by nomor ascending
+            grouped[kec].sort((a, b) => parseInt(a.nomor) - parseInt(b.nomor));
+
+            grouped[kec].forEach((bpk) => {
+              html += `
+              <div class="bpk-card">
+                <div class="card-icon">${bpk.nomor}</div>
+                <div class="card-info">
+                  <div class="bpk-nomor">No. Registrasi ${bpk.nomor}</div>
+                  <div class="bpk-nama">${escapeHtml(bpk.nama)}</div>
+                  <div class="bpk-wilayah">
+                    <i class="fas fa-map-pin"></i> ${escapeHtml(bpk.wilayah)}, ${bpk.kecamatan}
+                  </div>
+                  <div class="bpk-alamat">
+                    <i class="fas fa-location-dot"></i> ${escapeHtml(bpk.alamat)}
+                  </div>
+                  <div class="status-tag">
+                    <i class="fas fa-circle" style="font-size: 7px;"></i> AKTIF TERREGISTRASI
+                  </div>
+                </div>
+              </div>
+            `;
+            });
+            html += `</div></div>`;
+          }
+        }
+        container.innerHTML = html;
+      }
+
+      // Simple escape to prevent XSS
+      function escapeHtml(str) {
+        return str.replace(/[&<>]/g, function (m) {
+          if (m === "&") return "&amp;";
+          if (m === "<") return "&lt;";
+          if (m === ">") return "&gt;";
+          return m;
+        });
+      }
+
+      function setFilter(filterValue, btnElement) {
+        currentFilter = filterValue;
+        // Update active class on buttons
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        btnElement.classList.add("active");
+        render();
+      }
+
+      function filterAll() {
+        render();
+      }
+
+      // Initialize
+      render();
+    </script>
+  </body>
+</html>

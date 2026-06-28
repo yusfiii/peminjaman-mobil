@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
+    <meta name="theme-color" content="#2563eb" />
+    <title>Fotocopy Yusfi | Cepat, Rapi & Lengkap Banjarbaru</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #ffffff;
+        color: #1e293b;
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      :root {
+        --primary-blue: #2563eb;
+        --soft-blue: #eff6ff;
+        --dark-blue: #1e40af;
+        --light-bg: #f8fafc;
+        --border-light: #e2e8f0;
+        --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1rem 1.2rem;
+      }
+
+      /* navbar */
+      .navbar {
+        background: white;
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--border-light);
+        padding: 0.6rem 0;
+      }
+      .nav-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+      .logo h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        letter-spacing: -0.2px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .logo p {
+        font-size: 0.7rem;
+        color: #475569;
+        font-weight: 500;
+      }
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #1e293b;
+        transition: 0.2s;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+        background: var(--soft-blue);
+        border-radius: 40px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .nav-links a i {
+        font-size: 0.8rem;
+        color: var(--primary-blue);
+      }
+      .nav-links a:hover {
+        background: var(--primary-blue);
+        color: white;
+      }
+      .nav-links a:hover i {
+        color: white;
+      }
+
+      /* hero */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.5rem 0 2rem;
+      }
+      .hero-text {
+        text-align: center;
+      }
+      .hero-badge {
+        background: var(--soft-blue);
+        display: inline-block;
+        padding: 0.3rem 1rem;
+        border-radius: 40px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--primary-blue);
+        margin-bottom: 1rem;
+      }
+      .hero-text h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        color: #0f172a;
+      }
+      .hero-text .highlight {
+        color: var(--primary-blue);
+      }
+      .hero-desc {
+        color: #334155;
+        margin: 0.8rem 0 1rem;
+        line-height: 1.5;
+        font-size: 0.9rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+      }
+      .btn-primary,
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0.7rem 1.4rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: 0.2s;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background: var(--primary-blue);
+        color: white;
+        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+      }
+      .btn-primary:hover {
+        background: var(--dark-blue);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        background: white;
+        border: 2px solid var(--primary-blue);
+        color: var(--primary-blue);
+      }
+      .btn-outline:hover {
+        background: var(--soft-blue);
+      }
+      .hero-img {
+        width: 100%;
+        border-radius: 28px;
+        overflow: hidden;
+        background: var(--soft-blue);
+        box-shadow: var(--shadow-md);
+      }
+      .hero-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+
+      /* layanan grid */
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 1.8rem 0 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #0f172a;
+      }
+      .section-title i {
+        color: var(--primary-blue);
+        font-size: 1.4rem;
+      }
+      .services-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem 0 1.5rem;
+      }
+      .service-card {
+        background: white;
+        border-radius: 24px;
+        padding: 1rem;
+        flex: 1 1 calc(33% - 1rem);
+        min-width: 140px;
+        border: 1px solid var(--border-light);
+        box-shadow: var(--shadow-sm);
+        text-align: center;
+        transition: 0.2s;
+      }
+      .service-card i {
+        font-size: 1.8rem;
+        color: var(--primary-blue);
+        margin-bottom: 0.5rem;
+      }
+      .service-card h4 {
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+      }
+      .service-card p {
+        font-size: 0.7rem;
+        color: #475569;
+      }
+
+      /* target box - update: perusahaan & pemerintahan, umum saja */
+      .target-box {
+        background: var(--soft-blue);
+        border-radius: 28px;
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+        text-align: center;
+      }
+      .target-box h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+      }
+      .target-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+      }
+      .target-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+      .target-item i {
+        font-size: 1.6rem;
+        color: var(--primary-blue);
+        background: white;
+        padding: 10px;
+        border-radius: 60px;
+        box-shadow: var(--shadow-sm);
+      }
+      .target-item span {
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      /* maps section */
+      .maps-section {
+        background: white;
+        border-radius: 28px;
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+        border: 1px solid var(--border-light);
+        box-shadow: var(--shadow-sm);
+      }
+      .maps-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .maps-info h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+      }
+      .address-detail {
+        font-size: 0.85rem;
+        color: #334155;
+        margin: 0.5rem 0;
+        line-height: 1.4;
+      }
+      .address-detail i {
+        width: 24px;
+        color: var(--primary-blue);
+      }
+      .btn-map {
+        background: var(--primary-blue);
+        color: white;
+        padding: 0.7rem 1.2rem;
+        border-radius: 40px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+      }
+      .map-preview iframe {
+        width: 100%;
+        height: 220px;
+        border: 0;
+        border-radius: 20px;
+      }
+
+      /* jam operasi */
+      .hours-card {
+        background: #fefce8;
+        border-left: 5px solid var(--primary-blue);
+        padding: 1rem;
+        border-radius: 20px;
+        margin: 1rem 0;
+      }
+
+      /* galeri scroll */
+      .gallery-scroll {
+        overflow-x: auto;
+        display: flex;
+        gap: 1rem;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+        margin: 1rem 0 1.5rem;
+        -webkit-overflow-scrolling: touch;
+      }
+      .gallery-item {
+        scroll-snap-align: start;
+        flex: 0 0 260px;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: var(--shadow-sm);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        display: block;
+      }
+      .gallery-caption {
+        padding: 0.4rem;
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: 500;
+        background: white;
+      }
+
+      /* testimoni */
+      .testi-card {
+        background: var(--light-bg);
+        border-radius: 20px;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-left: 3px solid var(--primary-blue);
+      }
+
+      /* CTA WA dengan dua tombol terpisah */
+      .wa-cta {
+        background: var(--soft-blue);
+        border-radius: 28px;
+        padding: 1.5rem;
+        text-align: center;
+        margin: 1.8rem 0 1rem;
+      }
+      .wa-cta h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .wa-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+      .btn-wa-single {
+        background: #25d366;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 60px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        gap: 8px;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        transition: 0.2s;
+      }
+      .btn-wa-single:hover {
+        background: #128c7e;
+        transform: translateY(-2px);
+      }
+      .btn-wa-single i {
+        font-size: 1.2rem;
+      }
+      .wa-note {
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+        color: #334155;
+      }
+
+      /* footer */
+      footer {
+        text-align: center;
+        padding: 1.5rem 0 1rem;
+        font-size: 0.7rem;
+        color: #475569;
+        border-top: 1px solid var(--border-light);
+        margin-top: 1rem;
+      }
+      .footer-sosmed {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 0.8rem 0;
+      }
+      .footer-sosmed a {
+        color: #475569;
+        font-size: 1.2rem;
+        background: #f1f5f9;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 50%;
+        display: inline-block;
+        transition: 0.2s;
+      }
+      .footer-sosmed a:hover {
+        background: var(--primary-blue);
+        color: white;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding: 1.5rem 2rem;
+        }
+        .hero {
+          flex-direction: row;
+          align-items: center;
+          text-align: left;
+        }
+        .hero-text {
+          text-align: left;
+          flex: 1.2;
+        }
+        .hero-desc {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .btn-group {
+          justify-content: flex-start;
+        }
+        .maps-flex {
+          flex-direction: row;
+        }
+        .services-grid {
+          flex-wrap: nowrap;
+        }
+        .section-title {
+          font-size: 1.8rem;
+        }
+        .nav-links a {
+          background: transparent;
+          padding: 0;
+          font-size: 0.85rem;
+        }
+        .nav-links a:hover {
+          background: transparent;
+          color: var(--primary-blue);
+        }
+        .logo h1 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container nav-flex">
+        <div class="logo">
+          <h1><i class="fas fa-copy"></i> Fotocopy Yusfi</h1>
+          <p>Cepat, Rapi & Lengkap | Banjarbaru</p>
+        </div>
+        <div class="nav-links">
+          <a href="#layanan"><i class="fas fa-print"></i> Layanan</a>
+          <a href="#lokasi"><i class="fas fa-map-marker-alt"></i> Lokasi</a>
+          <a href="#galeri"><i class="fas fa-images"></i> Galeri</a>
+          <a href="#wa-section"><i class="fab fa-whatsapp"></i> Hubungi</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-text">
+          <div class="hero-badge"><i class="fas fa-bolt"></i> Cepat, Rapi, Lengkap</div>
+          <h2>Fotocopy & Jilid <span class="highlight">Sekali Datang, Pasti Balik Lagi!</span></h2>
+          <p class="hero-desc">Melayani fotocopy hitam putih & warna, penjilidan berbagai gaya, laminating, print scan, dan keperluan dokumen Anda. Solusi cetak untuk mahasiswa, kantor, instansi, dan umum.</p>
+          <div class="btn-group">
+            <!-- Tombol ini akan smooth scroll ke bagian WA dengan dua nomor -->
+            <a href="#wa-section" class="btn-primary"><i class="fab fa-whatsapp"></i> Pesan / Tanya</a>
+            <a href="#layanan" class="btn-outline"><i class="fas fa-chevron-down"></i> Lihat Layanan</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="ruko.jpeg" alt="Toko fotocopy Yusfi" onerror="this.src='https://placehold.co/800x500/eef2ff/2563eb?text=Fotocopy+Yusfi'" />
+        </div>
+      </div>
+
+      <!-- Layanan Unggulan -->
+      <div id="layanan">
+        <div class="section-title">
+          <i class="fas fa-cogs"></i>
+          <span>Layanan Kami</span>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-copy"></i>
+            <h4>Fotocopy Hitam Putih & Warna</h4>
+            <p>Hitam putih & full color cepat</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-book"></i>
+            <h4>Penjilidan</h4>
+            <p>Hardcover, softcover, spiral/ring, lakban</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-id-card"></i>
+            <h4>Laminating</h4>
+            <p>Dokumen jadi awet & profesional</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-print"></i>
+            <h4>Print & Scan</h4>
+            <p>Cetak dokumen, scan kualitas tinggi</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-palette"></i>
+            <h4>Cetak Buku</h4>
+            <p>Berbagai kebutuhan cetak lainnya</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-boxes"></i>
+            <h4>Lainnya</h4>
+            <p>Tinggal bilang, pasti kami bantu</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cocok Untuk (perusahaan, pemerintahan, mahasiswa, guru, umum) -->
+      <div class="target-box">
+        <h3><i class="fas fa-users"></i> Cocok untuk Anda:</h3>
+        <div class="target-icons">
+          <div class="target-item"><i class="fas fa-building"></i><span>Perusahaan</span></div>
+          <div class="target-item"><i class="fas fa-landmark"></i><span>Pemerintahan/Instansi</span></div>
+          <div class="target-item"><i class="fas fa-user-graduate"></i><span>Mahasiswa</span></div>
+          <div class="target-item"><i class="fas fa-chalkboard-user"></i><span>Guru & Pelajar</span></div>
+          <div class="target-item"><i class="fas fa-briefcase"></i><span>Pekerja Kantor</span></div>
+          <div class="target-item"><i class="fas fa-users"></i><span>Umum</span></div>
+        </div>
+      </div>
+
+      <!-- Galeri Foto -->
+      <div id="galeri">
+        <div class="section-title"><i class="fas fa-images"></i><span>Galeri Hasil</span></div>
+        <div class="gallery-scroll">
+          <div class="gallery-item">
+            <img src="hard3.png" alt="hardcover" />
+            <div class="gallery-caption">Jilid Hardcover</div>
+          </div>
+          <div class="gallery-item">
+            <img src="soft2.png" alt="softcover" />
+            <div class="gallery-caption">Jilid Softcover</div>
+          </div>
+          <div class="gallery-item">
+            <img src="lakban.png" alt="lakban" />
+            <div class="gallery-caption">Jilid Lakban</div>
+          </div>
+          <div class="gallery-item">
+            <img src="spiral.png" alt="spiral" />
+            <div class="gallery-caption">Jilid Spiral</div>
+          </div>
+          <div class="gallery-item">
+            <img src="kitab2.png" alt="kitab" />
+            <div class="gallery-caption">Kitab/yasin</div>
+          </div>
+          <div class="gallery-item">
+            <img src="tebal.png" alt="tebal" />
+            <div class="gallery-caption">Buku Tebal</div>
+          </div>
+          <div class="gallery-item">
+            <img src="a3.png" alt="a3" />
+            <div class="gallery-caption">A3</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://placehold.co/600x400/eef2ff/2563eb?text=Fotocopy+Color" alt="fotocopy warna" />
+            <div class="gallery-caption">🖨️ Fotocopy warna tajam</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimoni -->
+      <!-- <div class="section-title"><i class="fas fa-star"></i><span>Apa Kata Pelanggan</span></div>
+      <div class="testi-card"><i class="fas fa-quote-left" style="color: #2563eb; margin-right: 6px"></i> "Pelayanan cepat, jilidnya rapi banget. Harga bersahabat, cocok buat skripsi." <strong>- Andini (Mahasiswa)</strong></div>
+      <div class="testi-card"><i class="fas fa-quote-left" style="color: #2563eb; margin-right: 6px"></i> "Lengkap dari fotocopy sampai laminating. Lokasi strategis dekat UNLAM. Pasti balik lagi!" <strong>- Pak Rudi (Guru)</strong></div>
+      <div class="testi-card"><i class="fas fa-quote-left" style="color: #2563eb; margin-right: 6px"></i> "Sudah langganan untuk keperluan kantor. Cepat dan rapi, harga terjangkau." <strong>- Ibu Sekretaris (Perusahaan)</strong></div> -->
+
+      <!-- Lokasi & Maps -->
+      <div id="lokasi" class="maps-section">
+        <div class="maps-flex">
+          <div class="maps-info">
+            <h3><i class="fas fa-location-dot" style="color: var(--primary-blue)"></i> Lokasi Strategis</h3>
+            <div class="address-detail">
+              <i class="fas fa-road"></i> Jl. A. Yani KM 36, Seberang Gerbang UNLAM BJB<br />
+              <i class="fas fa-store"></i> Deretan Mie Gacoan UNLAM, Samping Wedrink BJB<br />
+              <i class="fas fa-clock"></i> Jam buka: 09.30 – 17.30 (Malam tutup)
+            </div>
+            <a href="https://maps.app.goo.gl/UiyrLfh9CgqzxX53A" target="_blank" class="btn-map"><i class="fas fa-external-link-alt"></i> Buka Google Maps</a>
+          </div>
+          <div class="map-preview">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.104993977587!2d114.84226307400412!3d-3.4428799965315835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de6810f8aad4841%3A0x6f39a845efca2822!2sFotokopi%20Yusfi!5e1!3m2!1sid!2sid!4v1781256848462!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jam Operasional -->
+      <div class="hours-card">
+        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; justify-content: space-between">
+          <div><i class="fas fa-clock" style="color: #2563eb"></i> <strong>🕘 Jam Buka:</strong> 09.30 – 17.30 (minggu tutup, malam tutup)</div>
+          <div><i class="fas fa-check-circle" style="color: #2563eb"></i> <strong>Lokasi:</strong> Seberang Gerbang UNLAM BJB</div>
+        </div>
+      </div>
+
+      <!-- CTA WhatsApp dengan dua tombol untuk dua nomor berbeda (bagian bawah) -->
+      <div id="wa-section" class="wa-cta">
+        <i class="fab fa-whatsapp" style="font-size: 2.8rem; color: #25d366"></i>
+        <h3>Butuh fotocopy cepat & rapi?</h3>
+        <p>Hubungi kami via WhatsApp untuk konsultasi harga atau pemesanan. Siap melayani skripsi, laporan, dokumen kantor & instansi.</p>
+
+        <!-- DUA TOMBOL UNTUK DUA NOMOR -->
+        <div class="wa-buttons">
+          <a href="https://wa.me/628125091110?text=Halo%20Fotocopy%20Yusfi,%20saya%20mau%20tanya%20harga%20fotocopy%20dan%20jilid.%20Terima%20kasih." target="_blank" class="btn-wa-single"> <i class="fab fa-whatsapp"></i> 0812-5091-110 </a>
+          <a href="https://wa.me/6282234557322?text=Halo%20Fotocopy%20Yusfi,%20saya%20mau%20tanya%20harga%20fotocopy%20dan%20jilid.%20Terima%20kasih." target="_blank" class="btn-wa-single">
+            <i class="fab fa-whatsapp"></i> 0822-3455-7322
+          </a>
+        </div>
+        <div class="wa-note"><i class="fas fa-reply-all"></i> Fast response, konsultasi gratis. Pilih nomor yang aktif.</div>
+      </div>
+
+      <!-- Keunggulan mini -->
+      <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin: 1rem 0">
+        <span style="background: #f1f5f9; padding: 0.3rem 0.8rem; border-radius: 40px; font-size: 0.7rem"><i class="fas fa-bolt" style="color: #2563eb"></i> Pelayanan Cepat</span>
+        <span style="background: #f1f5f9; padding: 0.3rem 0.8rem; border-radius: 40px; font-size: 0.7rem"><i class="fas fa-file-alt" style="color: #2563eb"></i> Hasil Rapi</span>
+        <span style="background: #f1f5f9; padding: 0.3rem 0.8rem; border-radius: 40px; font-size: 0.7rem"><i class="fas fa-coins" style="color: #2563eb"></i> Harga Bersahabat</span>
+        <span style="background: #f1f5f9; padding: 0.3rem 0.8rem; border-radius: 40px; font-size: 0.7rem"><i class="fas fa-thumbs-up" style="color: #2563eb"></i> Banyak pilihan jilid</span>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-sosmed">
+        <a href="https://www.instagram.com/fotocopyyusfi" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- <a href="https://www.facebook.com/fotocopyyusfi" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
+        <a href="https://wa.me/628125091110" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>📄 Fotocopy Yusfi — Fotocopy, Jilid, Laminating & Print | Banjarbaru</p>
+      <p><i class="fas fa-map-marker-alt"></i> Jl. A. Yani KM 36 (Seberang Gerbang UNLAM) | Buka 09.30 - 17.30</p>
+      <div class="footer-copyright">✨ Sekali datang, pasti balik lagi! ✨ | © 2026 Fotocopy Yusfi</div>
+    </footer>
+
+    <!-- Smooth scroll untuk semua anchor -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href === "#" || href === "") return;
+          const targetElement = document.querySelector(href);
+          if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

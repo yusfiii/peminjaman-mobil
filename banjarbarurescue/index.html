@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="BARRES 698 - Banjarbaru Rescue, organisasi relawan penanggulangan bencana di Kota Banjarbaru, Kalimantan Selatan" />
+    <title>BARRES 698 — Banjarbaru Rescue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #ffffff;
+        color: #0a0c10;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --yellow: #ffcc00;
+        --yellow-soft: #fff3c9;
+        --yellow-dark: #e5b800;
+        --gray-50: #f9fafb;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-500: #6b7280;
+        --gray-700: #374151;
+        --gray-900: #111827;
+        --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+        --transition: all 0.25s ease;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ========== NAVBAR ========== */
+      .navbar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(12px);
+        z-index: 1000;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo-img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        border-radius: 12px;
+        background: white;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .logo-text {
+        font-weight: 800;
+        font-size: 1.3rem;
+        letter-spacing: -0.3px;
+        color: var(--gray-900);
+        line-height: 1.2;
+      }
+      .logo-text span {
+        font-weight: 500;
+        font-size: 0.65rem;
+        color: var(--gray-500);
+        display: block;
+        margin-top: 2px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        background: var(--gray-50);
+        padding: 4px;
+        border-radius: 100px;
+        border: 1px solid var(--gray-200);
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        padding: 8px 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 40px;
+        color: var(--gray-700);
+        transition: var(--transition);
+      }
+
+      .nav-links a.active,
+      .nav-links a:hover {
+        background: white;
+        color: #000;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ========== HERO ========== */
+      .hero {
+        padding: 64px 0 56px;
+      }
+
+      .hero-grid {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        flex-wrap: wrap;
+      }
+
+      .hero-content {
+        flex: 1.2;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--yellow-soft);
+        padding: 6px 14px;
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #5a4300;
+        margin-bottom: 24px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        color: var(--gray-900);
+        margin-bottom: 16px;
+      }
+
+      .hero-title .accent {
+        background: linear-gradient(135deg, #ffcc00, #e5b800);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .hero-sub {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--gray-700);
+        margin-bottom: 16px;
+      }
+
+      .hero-desc {
+        font-size: 0.95rem;
+        color: var(--gray-500);
+        max-width: 520px;
+        margin-bottom: 32px;
+        line-height: 1.65;
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary,
+      .btn-outline,
+      .btn-contact {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: 44px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: var(--yellow);
+        color: #111;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background: var(--yellow-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(229, 184, 0, 0.3);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 1.5px solid var(--gray-200);
+        color: var(--gray-700);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--yellow);
+        background: var(--yellow-soft);
+        color: #000;
+      }
+
+      .btn-contact {
+        background: transparent;
+        border: 1.5px solid var(--yellow);
+        color: var(--gray-900);
+      }
+
+      .btn-contact:hover {
+        background: var(--yellow);
+        transform: translateY(-2px);
+      }
+
+      /* Hero Visual - responsive logo */
+      .hero-visual {
+        flex: 0.8;
+        background: linear-gradient(145deg, #fff9e6, #ffffff);
+        border-radius: 48px;
+        padding: 24px 20px;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--gray-100);
+      }
+
+      .emblem-modern {
+        background: var(--yellow);
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.15);
+      }
+
+      .logo-hero-img {
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 6px;
+      }
+
+      .emblem-number {
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .emblem-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .stats-row {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+      .stat-pill {
+        background: white;
+        border-radius: 60px;
+        padding: 8px 20px;
+        border: 1px solid var(--gray-200);
+      }
+      .stat-pill .num {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color: #111;
+      }
+      .stat-pill .lbl {
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: var(--gray-500);
+      }
+
+      /* ========== SECTIONS ========== */
+      .section {
+        padding: 64px 0;
+      }
+      .section-alt {
+        background-color: var(--gray-50);
+        border-radius: 48px;
+        margin: 24px 0;
+      }
+      .section-header {
+        margin-bottom: 40px;
+      }
+      .eyebrow {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--yellow-dark);
+        margin-bottom: 10px;
+      }
+      .section-title {
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+
+      /* Cards grid */
+      .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .card {
+        background: white;
+        border-radius: 28px;
+        padding: 24px;
+        transition: var(--transition);
+        border: 1px solid var(--gray-100);
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: var(--yellow);
+        box-shadow: var(--shadow-md);
+      }
+      .card-icon {
+        width: 52px;
+        height: 52px;
+        background: var(--yellow-soft);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 18px;
+      }
+      .card h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .card p {
+        font-size: 0.85rem;
+        color: var(--gray-500);
+        line-height: 1.55;
+      }
+
+      /* About Flex */
+      .about-flex {
+        display: flex;
+        gap: 48px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .about-text {
+        flex: 1.2;
+      }
+      .highlight-modern {
+        flex: 0.8;
+        background: white;
+        border-radius: 32px;
+        padding: 28px 24px;
+        border: 1px solid var(--gray-200);
+      }
+      .value-item {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 20px;
+      }
+      .value-icon {
+        width: 38px;
+        height: 38px;
+        background: var(--yellow-soft);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+      .value-text strong {
+        font-weight: 700;
+        display: block;
+        font-size: 0.9rem;
+      }
+      .value-text p {
+        font-size: 0.8rem;
+        color: var(--gray-500);
+        margin-top: 4px;
+      }
+
+      /* Visi Misi Grid */
+      .visi-grid-modern {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+      .visi-card {
+        background: var(--yellow);
+        border-radius: 28px;
+        padding: 32px 28px;
+      }
+      .misi-card {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: 28px;
+        padding: 32px 28px;
+      }
+      .vm-tag {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        color: rgba(0, 0, 0, 0.55);
+      }
+      .visi-card h3,
+      .misi-card h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+      .misi-list-clean {
+        list-style: none;
+      }
+      .misi-list-clean li {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 14px;
+        font-size: 0.85rem;
+        color: var(--gray-700);
+      }
+      .misi-list-clean li i {
+        color: var(--yellow-dark);
+        margin-top: 2px;
+        font-size: 0.9rem;
+      }
+
+      /* Contact Grid */
+      .contact-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+      .contact-card {
+        background: white;
+        border-radius: 24px;
+        border: 1px solid var(--gray-100);
+        padding: 18px 22px;
+        flex: 1;
+        min-width: 180px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        transition: var(--transition);
+        text-decoration: none;
+        color: inherit;
+      }
+      .contact-card:hover {
+        border-color: var(--yellow);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+      }
+      .contact-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--yellow-soft);
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .contact-detail .label {
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: var(--gray-500);
+      }
+      .contact-detail .value {
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--gray-200);
+        padding: 28px 0;
+        text-align: center;
+        background: white;
+        color: var(--gray-500);
+        font-size: 0.75rem;
+      }
+      footer strong {
+        color: var(--yellow-dark);
+      }
+
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 900px) {
+        .container {
+          padding: 0 20px;
+        }
+        .hero {
+          padding: 48px 0 40px;
+        }
+        .hero-grid {
+          flex-direction: column-reverse;
+          gap: 32px;
+        }
+        .hero-content {
+          text-align: center;
+        }
+        .hero-desc {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .btn-group {
+          justify-content: center;
+        }
+        .visi-grid-modern {
+          grid-template-columns: 1fr;
+        }
+        .section {
+          padding: 48px 0;
+        }
+        .section-alt {
+          margin: 16px 0;
+        }
+        .about-flex {
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .nav-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .nav-links {
+          align-self: flex-start;
+        }
+        .hero-visual {
+          width: 100%;
+        }
+        .emblem-modern {
+          width: 150px;
+          height: 150px;
+        }
+        .logo-hero-img {
+          width: 80px;
+        }
+        .stats-row {
+          gap: 10px;
+        }
+        .stat-pill {
+          padding: 6px 16px;
+        }
+        .stat-pill .num {
+          font-size: 1.1rem;
+        }
+        .grid-cards {
+          grid-template-columns: 1fr;
+        }
+        .contact-card {
+          min-width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 16px;
+        }
+        .nav-links a {
+          padding: 6px 14px;
+          font-size: 0.75rem;
+        }
+        .logo-text {
+          font-size: 1.1rem;
+        }
+        .hero-title {
+          font-size: 2rem;
+        }
+        .hero-sub {
+          font-size: 1rem;
+        }
+        .btn-primary,
+        .btn-outline,
+        .btn-contact {
+          padding: 10px 20px;
+          font-size: 0.75rem;
+        }
+        .section-title {
+          font-size: 1.5rem;
+        }
+        .visi-card,
+        .misi-card {
+          padding: 24px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <img src="barres2.png" alt="BARRES Logo" class="logo-img" onerror="this.onerror=null; this.src='https://placehold.co/44x44?text=698';" />
+          <div class="logo-text">BARRES 698<span>Banjarbaru Rescue 698</span></div>
+        </a>
+        <div class="nav-links">
+          <a href="index.html" class="active">Beranda</a>
+          <a href="bpk.html">Daftar BPK</a>
+          <a href="pengurus.html">Pengurus</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <div class="container hero">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <br />
+            <div class="badge"><i class="fas fa-bolt"></i> Siaga Bencana · Kode 698</div>
+            <h1 class="hero-title">Banjarbaru Rescue <span class="accent">698</span></h1>
+            <p class="hero-sub">BARRES — Garda Terdepan Penyelamatan</p>
+            <p class="hero-desc">Organisasi relawan profesional yang menyatukan seluruh Barisan Pemadam Kebakaran (BPK) di Kota Banjarbaru. Cepat, terkoordinasi, dan berdedikasi tinggi untuk keselamatan masyarakat.</p>
+            <div class="btn-group">
+              <a href="bpk.html" class="btn-primary"><i class="fas fa-arrow-right"></i> Lihat BPK Terdaftar</a>
+              <a href="pengurus.html" class="btn-outline"><i class="fas fa-users"></i> Struktur Pengurus</a>
+              <a href="#contact-section" class="btn-contact"><i class="fas fa-headset"></i> Kontak & Bantuan</a>
+            </div>
+          </div>
+          <!-- <div class="hero-visual">
+            <div class="emblem-modern">
+              <img src="barres2.png" alt="Logo BARRES" class="logo-hero-img" onerror="this.onerror=null; this.src='https://placehold.co/100x100?text=698';" />
+              <div class="emblem-number">698</div>
+              <div class="emblem-label">BARRES</div>
+            </div>
+            <div class="stats-row">
+              <div class="stat-pill"><span class="num">27+</span> <span class="lbl">BPK Aktif</span></div>
+              <div class="stat-pill"><span class="num">200+</span> <span class="lbl">Anggota</span></div>
+              <div class="stat-pill"><span class="num">24/7</span> <span class="lbl">Siaga</span></div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <br />
+
+      <!-- Mission Section -->
+      <div class="container section">
+        <div class="section-header">
+          <div class="eyebrow">FOKUS UTAMA</div>
+          <h2 class="section-title">Bidang Operasional & Penanganan</h2>
+          <p style="color: var(--gray-500); margin-top: 10px">Kesiapan total untuk berbagai situasi darurat di wilayah Banjarbaru dan sekitarnya.</p>
+        </div>
+        <div class="grid-cards">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-fire-extinguisher"></i></div>
+            <h3>Pemadaman Kebakaran</h3>
+            <p>Koordinasi bersama BPK terdaftar, respon cepat kebakaran permukiman & fasum.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-water"></i></div>
+            <h3>Banjir & Evakuasi</h3>
+            <p>Penanganan banjir, evakuasi warga, distribusi logistik, dan pemulihan kawasan terdampak.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-truck-medical"></i></div>
+            <h3>PPGD & Pertolongan Pertama</h3>
+            <p>Tim medis lapangan siap siaga memberikan pertolongan pertama gawat darurat.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-mountain"></i></div>
+            <h3>SAR & Penyelamatan</h3>
+            <p>Operasi pencarian dan penyelamatan di medan perkotaan, perairan, hingga rawa.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-id-card"></i></div>
+            <h3>Registrasi & Sertifikasi BPK</h3>
+            <p>Legitimasi dan standarisasi Barisan Pemadam Kebakaran swasta agar terdata resmi.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-chalkboard-user"></i></div>
+            <h3>Pelatihan Kebencanaan</h3>
+            <p>Edukasi masyarakat, pelatihan siaga bencana, dan peningkatan kapasitas relawan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div class="container section section-alt" style="padding: 48px 40px">
+        <div class="about-flex">
+          <div class="about-text">
+            <div class="eyebrow">Tentang BARRES</div>
+            <h2 class="section-title" style="margin-bottom: 18px">698 — Kode Keberanian Banjarbaru</h2>
+            <p style="margin-bottom: 16px; color: var(--gray-700)">
+              Banjarbaru Rescue (BARRES) adalah wadah koordinasi seluruh unsur relawan kebencanaan di Kota Banjarbaru, Kalimantan Selatan. Berdiri sebagai mitra strategis BPBD & Dinas Damkar, kami mengedepankan profesionalitas dan
+              kecepatan.
+            </p>
+            <p style="color: var(--gray-600)">Dengan kode 698 yang melekat, kami menjadi simbol respon darurat yang terstandar, menjamin setiap BPK terdaftar siap bergerak kapan saja dibutuhkan oleh masyarakat.</p>
+          </div>
+          <div class="highlight-modern">
+            <h3><i class="fas fa-gem" style="margin-right: 8px"></i> DNA Organisasi</h3>
+            <div class="value-item">
+              <div class="value-icon"><i class="fas fa-bolt"></i></div>
+              <div class="value-text">
+                <strong>Kecepatan & Taktis</strong>
+                <p>Respons ≤ menit, sistem komando terintegrasi</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="fas fa-handshake"></i></div>
+              <div class="value-text">
+                <strong>Kolaborasi</strong>
+                <p>Sinergi BPK, pemerintah, TNI/Polri & relawan</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="value-text">
+                <strong>Standar Nasional</strong>
+                <p>Pelatihan bersertifikasi dan prosedur teruji</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon"><i class="fas fa-heart"></i></div>
+              <div class="value-text">
+                <strong>Pengabdian Tulus</strong>
+                <p>Kerelawanan murni untuk keselamatan bersama</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visi Misi -->
+      <div class="container section">
+        <div class="section-header">
+          <div class="eyebrow">HALUAN ORGANISASI</div>
+          <h2 class="section-title">Visi & Misi Kebencanaan</h2>
+        </div>
+        <div class="visi-grid-modern">
+          <div class="visi-card">
+            <div class="vm-tag"><i class="fas fa-eye"></i> VISI</div>
+            <h3>Menjadi pusat keunggulan relawan penanggulangan bencana yang adaptif, profesional, dan terpercaya di Kalimantan Selatan.</h3>
+          </div>
+          <div class="misi-card">
+            <div class="vm-tag"><i class="fas fa-bullseye"></i> MISI</div>
+            <ul class="misi-list-clean">
+              <li><i class="fas fa-check-circle"></i> Menyatukan & mengoordinasikan seluruh BPK se-Banjarbaru dalam satu komando tanggap darurat.</li>
+              <li><i class="fas fa-check-circle"></i> Meningkatkan kompetensi melalui pelatihan kebencanaan bersertifikasi nasional.</li>
+              <li><i class="fas fa-check-circle"></i> Membangun sistem peringatan dini dan posko siaga 24 jam terintegrasi.</li>
+              <li><i class="fas fa-check-circle"></i> Memperkuat kemitraan dengan pemerintah daerah, dunia usaha, dan media.</li>
+              <li><i class="fas fa-check-circle"></i> Mendorong budaya sadar bencana dengan program edukasi berbasis masyarakat.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <!-- Contact Section -->
+      <div id="contact-section" class="container section" style="padding-top: 0; scroll-margin-top: 90px">
+        <div class="section-header">
+          <div class="eyebrow">HUBUNGI KAMI</div>
+          <h2 class="section-title">Informasi Kontak</h2>
+          <p style="color: var(--gray-500)">Klik kartu untuk langsung terhubung — darurat, kerja sama, atau informasi relawan.</p>
+        </div>
+        <div class="contact-grid">
+          <a href="https://maps.app.goo.gl/3RBnSXnJwvDjm7STA" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail">
+              <div class="label">Sekretariat (Maps)</div>
+              <div class="value">Kota Banjarbaru, Kalsel</div>
+            </div>
+          </a>
+          <a href="https://wa.me/6285111315698" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-detail">
+              <div class="label">Hotline (WhatsApp)</div>
+              <div class="value">0851 1131 5698</div>
+            </div>
+          </a>
+          <a href="mailto:barres698.banjarbaru@gmail.com" class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail">
+              <div class="label">Email Resmi</div>
+              <div class="value">barres698.banjarbaru@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://instagram.com/barres698_bjb" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+            <div class="contact-detail">
+              <div class="label">Media Sosial</div>
+              <div class="value">@barres698_bjb</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 <strong>BARRES — Banjarbaru Rescue 698</strong> · Kota Banjarbaru, Kalimantan Selatan</p>
+        <p style="margin-top: 6px; font-size: 0.7rem">Siaga penuh · Melayani dengan integritas · Kode 698</p>
+      </div>
+    </footer>
+  </body>
+</html>
